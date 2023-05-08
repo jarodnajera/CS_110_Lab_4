@@ -4,14 +4,16 @@ import NewPost from './NewPost';
 import Comment from './Comment';
 
 function App() {
-  const [comments, setComments] = useState(0);
+  const [comments, setComments] = useState([]);
+  const [replies, setReplies] = useState([]);
+
   const addComment = (comment) => {
     setComments([...comments, comment]);
   }
 
-  /*const addReply = (reply) => {
-
-  }*/
+  const addReply = (reply) => {
+    setReplies([...replies, reply]);
+  }
 
   return (
     <div className="app">
@@ -23,9 +25,9 @@ function App() {
           <NewPost addComment={addComment} />
         </div>
         <div className="comment-container">
-          {comments.map((comment) => {
-            <Comment comment={comment}></Comment>
-          })}
+          {comments.map((c) => (
+            <Comment content={c}></Comment>
+          ))}
         </div>
       </header>
     </div>

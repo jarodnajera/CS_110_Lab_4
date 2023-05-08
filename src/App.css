@@ -1,0 +1,97 @@
+.app {
+  display: flex;
+  justify-content: center;
+  font-family: 'Prompt', sans-serif;
+}
+
+.post-container {
+  margin-top: 50px;
+  height: 300px;
+  width: 400px;
+  padding: 15px 15px;
+  border: 1px solid rgb(205, 205, 205);
+  border-radius: .5rem;
+  box-shadow: 1px 1px 10px rgb(119, 119, 119);
+}
+
+.new-post {
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  font-size: 20px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(205, 205, 205);
+}
+
+#submit-btn-container {
+  position: relative;
+}
+
+#submit-btn {
+  float: right;
+  padding: 10px 15px;
+  border-radius: .5em;
+  border: none;
+  background: rgb(32, 125, 255);
+  color: white;
+  font-size: 14px;
+}
+
+#submit-btn:hover {
+  cursor: pointer;
+  background: rgb(4, 105, 248);
+}
+
+#submit-btn:disabled {
+  cursor:not-allowed;
+  background: rgb(149, 173, 206);
+}
+
+.comment-container {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.comment-wrapper {
+  padding: 8px;
+}
+
+.comment-vote-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.vote-btn {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.comment-username {
+  padding: 5px;
+  color:rgb(4, 105, 248)
+}
+
+.comment-post {
+  padding: 5px;
+}
+
+.reply-btn {
+  border-radius: .5em;
+  border: none;
+  background: rgb(32, 125, 255);
+  color: white;
+  padding: 5px;
+  margin-left: 8px;
+}
