@@ -23,7 +23,7 @@ const NewPost = ({addComment}) => {
     return (
         <div className="new-post">
             <input id="post-username" type="text" placeholder="Name..." value={username} onChange={handle_username_btn}></input>
-            <input id="post-content" type="text" placeholder="Write a new post..." value={post} onChange={handle_post_btn} />
+            <textarea id="post-content" type="text" placeholder="Write a new post..." value={post} onChange={handle_post_btn} />
             <div id="submit-btn-container">
                 <button id="submit-btn" disabled={btn_enabled} onClick={savePost}>Submit</button>
             </div>

@@ -1,7 +1,9 @@
 import { useState } from "react";
+import NewPost from "./NewPost";
 
 const Comment = ({content}) => {
     const [votes, changeVotes] = useState(0);
+    const [reply, changeReply] = useState(0);
 
     return (
         <div className="comment-wrapper">
@@ -19,6 +21,7 @@ const Comment = ({content}) => {
             <div className="reply-btn-container">
                 <button className="reply-btn">Reply</button>
             </div>
+            <div className="reply-container" onClick={() => {changeReply(reply + 1); console.log(reply)}}>{reply === 1 ? <NewPost></NewPost> : ''}</div>
         </div>
         
     )

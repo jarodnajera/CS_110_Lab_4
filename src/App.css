@@ -6,7 +6,7 @@
 
 .post-container {
   margin-top: 50px;
-  height: 300px;
+  height: 250px;
   width: 400px;
   padding: 15px 15px;
   border: 1px solid rgb(205, 205, 205);
@@ -29,6 +29,16 @@ input {
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid rgb(205, 205, 205);
+}
+
+textarea {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(205, 205, 205);
+  height: 110px;
+  min-height: 40px;
+  max-height: 110px;
+  resize: vertical;
 }
 
 #submit-btn-container {
@@ -58,10 +68,15 @@ input {
 .comment-container {
   margin-top: 20px;
   padding: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .comment-wrapper {
   padding: 8px;
+  max-width: 450px;
+  border: 1px solid rgb(32, 125, 255);
+  border-radius: .5em;
 }
 
 .comment-vote-container {
@@ -80,7 +95,8 @@ input {
 
 .comment-username {
   padding: 5px;
-  color:rgb(4, 105, 248)
+  color:rgb(4, 105, 248);
+  font-weight: bold;
 }
 
 .comment-post {
@@ -94,4 +110,9 @@ input {
   color: white;
   padding: 5px;
   margin-left: 8px;
+}
+
+.reply-btn:hover {
+  cursor: pointer;
+  background: rgb(4, 105, 248);
 }
