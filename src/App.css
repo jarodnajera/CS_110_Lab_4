@@ -75,8 +75,7 @@ textarea {
 .comment-wrapper {
   padding: 8px;
   max-width: 450px;
-  border: 1px solid rgb(32, 125, 255);
-  border-radius: .5em;
+  border-left: 1px solid rgb(32, 125, 255);
 }
 
 .comment-vote-container {
