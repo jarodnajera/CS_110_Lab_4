@@ -1,9 +1,15 @@
 import { useState } from "react";
 import NewPost from "./NewPost";
 
-const Comment = ({content}) => {
+const Comment = ({content, depth}) => {
     const [votes, changeVotes] = useState(0);
-    const [reply, changeReply] = useState(0);
+    const [reply, changeReply] = useState(false);
+   
+    const addReply = (reply) => {
+        content.replies.push(reply);
+        changeReply(!reply);
+    }
+    
 
     return (
         <div className="comment-wrapper">
@@ -19,9 +25,14 @@ const Comment = ({content}) => {
                 </div>
             </div>
             <div className="reply-btn-container">
-                <button className="reply-btn">Reply</button>
+                {depth < 3 ? <button className="reply-btn" onClick={() => {changeReply(!reply)}}>Reply</button>: ''}
             </div>
-            <div className="reply-container" onClick={() => {changeReply(reply + 1); console.log(reply)}}>{reply === 1 ? <NewPost></NewPost> : ''}</div>
+            <div className="reply-container">
+                {reply === true ? <NewPost addComment={addReply}></NewPost> : ''}
+                {content.replies.map((r) => (
+                    <Comment content={r} depth={depth + 1}></Comment>
+                ))}
+            </div>
         </div>
         
     )

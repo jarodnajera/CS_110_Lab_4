@@ -116,3 +116,7 @@ textarea {
   cursor: pointer;
   background: rgb(4, 105, 248);
 }
+
+.reply-container {
+  margin-top: 15px;
+}

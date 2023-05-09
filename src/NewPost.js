@@ -7,7 +7,8 @@ const NewPost = ({addComment}) => {
     const savePost = () => {
         addComment({
             username: username,
-            post: post
+            post: post,
+            replies: []
         })
     }
     const handle_username_btn = e => {
